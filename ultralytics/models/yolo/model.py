@@ -15,10 +15,12 @@ class YOLO(Model):
         """Initialize YOLO model, switching to YOLOWorld if model filename contains '-world'."""
         path = Path(model)
         if "-world" in path.stem and path.suffix in {".pt", ".yaml", ".yml"}:  # if YOLOWorld PyTorch model
+            print('model.py line 18-----','"-world" in path.stem and path.suffix in {".pt", ".yaml", ".yml"}:')
             new_instance = YOLOWorld(path)
             self.__class__ = type(new_instance)
             self.__dict__ = new_instance.__dict__
         else:
+            print('model.py line 23-----','else')
             # Continue with default YOLO initialization
             super().__init__(model=model, task=task, verbose=verbose)
 

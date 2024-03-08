@@ -1,0 +1,12 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: F:/doctor/StrawDI_Data  # dataset root dir
+train: F:/doctor/StrawDI_Data/images/train  # train images (relative to 'path') 118287 images
+val: F:/doctor/StrawDI_Data/images/val  # val images (relative to 'path') 5000 images
+test: F:/doctor/StrawDI_Data/images/tset  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+ 
+# Classes
+names:
+  0: ripe
+  1: unripe
+
+nc: 2
